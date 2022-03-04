@@ -1,0 +1,18 @@
+This is the guide I obtained from brightspace. If you did some work, put a number that best relates in the summary with your name, and push it to
+github. Feel free to use the description for whatever. (Francois)
+
+1. Create the initial screen consisting of Blog Name, Edit and Publish columns. 
+There are a total of 3 blogs for this project.
+
+2. Implement functionality for the Edit column
+	-Appear/Disappear Keyboard, other edit options and textbox
+
+3. Create the keyboard.
+	
+4. Implement keyboard functionality for everything except the grey keys.
+
+5. Create the text entry area.
+	-Keystrokes should appear in textbox
+
+6. Implement the save cancel functionality in local storage only.
+
