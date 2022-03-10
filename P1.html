@@ -24,7 +24,6 @@
     <script src="./jquery-3.6.0.js"></script>
     <script src="./P1.js"></script>
   </head>
-
   <body class="m-5" onload="setup()">
     <div class="wrapper">
       <div class="c1r1">Blog Name</div>
@@ -56,21 +55,21 @@
       <!--https://www.bootstraptoggle.com/#usage-->
       <!-- where i got the toggle switches from , 
         theyre just used as a place holder for now. -->
-      <div class="c2r2">
+      <div class="c2r2" id="editBlog1">
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" onclick="editBlog1()" />
           <span class="slider round"></span>
         </label>
       </div>
-      <div class="c2r3">
+      <div class="c2r3" id="editBlog2">
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" onclick="editBlog2()" />
           <span class="slider round"></span>
         </label>
       </div>
-      <div class="c2r4">
+      <div class="c2r4" id="editBlog3">
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" onclick="editBlog3()" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -94,37 +93,37 @@
         </label>
       </div>
     </div>
-    <div class="keyboard" style="display: none">
+    <div class="keyboard" id="keyboard">
       <div>
-        <a data-role="button" class="btn btn-danger" onclick="addChar('1')"
-          >1</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('!')"
+          >!</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('2')"
-          >2</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('?')"
+          >?</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('3')"
-          >3</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar(',')"
+          >,</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('4')"
-          >4</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('.')"
+          >.</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('5')"
-          >5</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('\'')"
+          >'</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('6')"
-          >6</a
+        <a data-role="button" class="btn btn-danger" onclick='addChar("\"")'
+          >"</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('7')"
-          >7</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('@')"
+          >@</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('8')"
-          >8</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar('&')"
+          >&</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('9')"
-          >9</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar(':')"
+          >:</a
         >
-        <a data-role="button" class="btn btn-danger" onclick="addChar('0')"
-          >0</a
+        <a data-role="button" class="btn btn-danger" onclick="addChar(';')"
+          >;</a
         >
         <a data-role="button" class="btn btn-dark" onclick="addChar('bksp')">
           <i class="bi-arrow-left"></i>
@@ -295,6 +294,9 @@
           onclick="addChar('m')"
           >M</a
         >
+        <a data-role="button" class="btn btn-dark" onclick="caps()">caps</a>
+      </div>
+      <div class="m-1">
         <a
           data-role="button"
           class="btn btn-dark"
@@ -302,7 +304,6 @@
           onclick="addChar(' ')"
           >Space</a
         >
-        <a data-role="button" class="btn btn-dark" onclick="caps()">caps</a>
       </div>
     </div>
   </body>
