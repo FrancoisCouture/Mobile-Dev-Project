@@ -121,3 +121,34 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+table {
+  table-layout: fixed;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 0 1em 0;
+}
+
+tr {
+  width: 100%;
+  margin: none;
+}
+
+td a {
+  width: 100%;
+}
+
+a p {
+  font-size: 48px;
+}
+
+.txt {
+  height: 100px;
+  width: 20%;
+}
+
+.star {
+  margin: 0 50px 0 5px;
+  width: 100px;
+  height: 95px;
+}

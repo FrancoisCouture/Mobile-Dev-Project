@@ -4,25 +4,78 @@ let toggle = false;
 var blog1edit = document.getElementById("editBlog1");
 
 function setup() {
-  document.getElementById("keyboard").style.visibility = "hidden";
+  $("#keyboard").hide();
+
+  $("#eb1").val("off");
+
+  $("#eb2").val("off");
+
+  $("#eb3").val("off");
+ 
+
+  // $("#editBlog1").on("click", function(){
+  //   $("#editBlog2").hide();
+  //   $("#editBlog3").hide();
+  //   $("#keyboard").show();
+  //   var t = $("#1").val();
+  //   console.log(t);
+  // })
+  // $("#editBlog2").on("click", function(){
+  //   $("#editBlog1").hide();
+  //   $("#editBlog3").hide();
+  //   $("#keyboard").show();
+  // })
+  // $("#editBlog3").on("click", function(){
+  //   $("#editBlog2").hide();
+  //   $("#editBlog1").hide();
+  //   $("#keyboard").show();
+  // })
 }
 
 function editBlog1() {
-  document.getElementById("editBlog2").style.visibility = "hidden";
-  document.getElementById("editBlog3").style.visibility = "hidden";
-  document.getElementById("keyboard").style.visibility = "visible";
+  if ($("#eb1").val() == "off"){
+    $("#editBlog2").hide();
+    $("#editBlog3").hide();
+    $("#keyboard").show();
+    $("#eb1").val("on");
+  }
+  else {
+    $("#editBlog2").show();
+    $("#editBlog3").show();
+    $("#keyboard").hide();
+    $("#eb1").val("off");
+  }
+
 }
 
 function editBlog2() {
-  document.getElementById("editBlog1").style.visibility = "hidden";
-  document.getElementById("editBlog3").style.visibility = "hidden";
-  document.getElementById("keyboard").style.visibility = "visible";
+  if ($("#eb2").val() == "off"){
+    $("#editBlog1").hide();
+    $("#editBlog3").hide();
+    $("#keyboard").show();
+    $("#eb2").val("on");
+  }
+  else {
+    $("#editBlog1").show();
+    $("#editBlog3").show();
+    $("#keyboard").hide();
+    $("#eb2").val("off");
+  }
 }
 
 function editBlog3() {
-  document.getElementById("editBlog1").style.visibility = "hidden";
-  document.getElementById("editBlog2").style.visibility = "hidden";
-  document.getElementById("keyboard").style.visibility = "visible";
+  if ($("#eb3").val() == "off"){
+    $("#editBlog2").hide();
+    $("#editBlog1").hide();
+    $("#keyboard").show();
+    $("#eb3").val("on");
+  }
+  else {
+    $("#editBlog2").show();
+    $("#editBlog1").show();
+    $("#keyboard").hide();
+    $("#eb3").val("off");
+  }
 }
 
 // end of toggle functionality-------------------------------------------
