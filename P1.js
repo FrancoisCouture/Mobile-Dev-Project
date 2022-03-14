@@ -44,6 +44,7 @@ function editBlog1() {
     $("#editBlog3").show();
     $("#keyboard").hide();
     $("#eb1").val("off");
+	$("#words").val("");
   }
 
 }
@@ -60,6 +61,7 @@ function editBlog2() {
     $("#editBlog3").show();
     $("#keyboard").hide();
     $("#eb2").val("off");
+	$("#words").val("");
   }
 }
 
@@ -75,6 +77,7 @@ function editBlog3() {
     $("#editBlog1").show();
     $("#keyboard").hide();
     $("#eb3").val("off");
+	$("#words").val("");
   }
 }
 
