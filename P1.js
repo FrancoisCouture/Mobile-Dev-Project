@@ -98,6 +98,16 @@ function addChar(selection) {
       $("#words").val(currChars.concat(selection));
     }
   }
+  currChars = $("#words").val();
+  if ($("#eb1").val() == "on"){
+	  $("#blogOne").val(currChars);
+  }
+  if ($("#eb2").val() == "on"){
+	  $("#blogTwo").val(currChars);
+  }
+  if ($("#eb3").val() == "on"){
+	  $("#blogThree").val(currChars);
+  }
 }
 
 function enter() {
@@ -112,18 +122,6 @@ function caps() {
 }
 
 function saveTitle(){
-  var content = $("#words").val();
-  if ($("#eb1").val() == "on"){
-	  console.log(content);
-	  $("#blogOne").val(content);
-  }
-  if ($("#eb2").val() == "on"){
-	  console.log(content);
-	  $("#blogTwo").val(content);
-  }
-  if ($("#eb3").val() == "on"){
-	  console.log(content);
-	  $("#blogThree").val(content);
-  }
+  //var content = $("#words").val();
 	
 }
