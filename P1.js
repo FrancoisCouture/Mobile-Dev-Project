@@ -110,3 +110,20 @@ function caps() {
   document.getElementById("Caps").innerHTML = "Caps On!";
   cap = true;
 }
+
+function saveTitle(){
+  var content = $("#words").val();
+  if ($("#eb1").val() == "on"){
+	  console.log(content);
+	  $("#blogOne").val(content);
+  }
+  if ($("#eb2").val() == "on"){
+	  console.log(content);
+	  $("#blogTwo").val(content);
+  }
+  if ($("#eb3").val() == "on"){
+	  console.log(content);
+	  $("#blogThree").val(content);
+  }
+	
+}
