@@ -98,7 +98,16 @@ function addChar(selection) {
       $("#words").val(currChars.concat(selection));
     }
   }
- 
+  currChars = $("#words").val();
+  if ($("#eb1").val() == "on"){
+	  $("#blogOne").val(currChars);
+  }
+  if ($("#eb2").val() == "on"){
+	  $("#blogTwo").val(currChars);
+  }
+  if ($("#eb3").val() == "on"){
+	  $("#blogThree").val(currChars);
+  }
 }
 
 function enter() {
