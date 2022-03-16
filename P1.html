@@ -1,7 +1,7 @@
 <html>
   <!DOCTYPE html>
   <head>
-    <title>Keys</title>
+    <title>My blog</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,6 +34,7 @@
           type="text"
           name="blogOne"
           id="blogOne"
+          onclick="active()"
         />
       </div>
       <div class="c1r3">
@@ -41,6 +42,7 @@
           type="text"
           name="blogTwo"
           id="blogTwo"
+          onclick="active()"
         />
       </div>
       <div class="c1r4">
@@ -48,6 +50,7 @@
           type="text"
           name="blogThree"
           id="blogThree"
+          onclick="active()"
         />
       </div>
       <div class="c2r1">Edit</div>
@@ -96,9 +99,11 @@
     <div class="keyboard" id="keyboard">
       <table>
 		<!-- done by Jun -->
-	    <tr>
-			<input style = "width: 1459px; height: 100px; font-size: 36pt" type = "text" id = "words">
-		</tr>
+	      <tr>
+          <textarea type = "text" id = "words1" onclick="active()"></textarea>
+          <textarea type = "text" id = "words2" onclick="active()"></textarea>
+          <textarea type = "text" id = "words3" onclick="active()"></textarea>
+		    </tr>
 		<!-- done by Jun -->
         <tr >
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('1')"><p>1</p></a></td>
@@ -111,7 +116,7 @@
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('8')"><p>8</p></a></td>
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('9')"><p>9</p></a></td>
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('0')"><p>0</p></a></td>
-          <td colspan="2"><a data-role="button" class="btn btn-dark" onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="64" height="88" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+          <td colspan="2"><a data-role="button" class="btn btn-dark" onclick="caps()"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="88" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
           </svg></a></td>
         </tr>
@@ -141,7 +146,7 @@
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('k')"><p>K</p></a></td>
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('l')"><p>L</p></a></td>
           <td><a data-role="button" class="btn btn-danger" onclick='addChar("\"")'><p>"</p></a></td>
-          <td colspan="2"><a data-role="button" class="btn btn-dark" onclick="addChar('Enter')"><p>Enter</p></a></td>
+          <td colspan="2"><a data-role="button" class="btn btn-dark" onclick="enter()"><p>Enter</p></a></td>
         </tr>
         <tr>
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('z')"><p>Z</p></a></td>
