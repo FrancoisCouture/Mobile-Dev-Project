@@ -19,7 +19,7 @@ function editBlog1() {
     $("#keyboard").show();
     $("#words1").show();
     $("#eb1").val("on");
-    act ="";
+    act ="words1";
   }
   else {
     $("#editBlog2").show();
@@ -39,7 +39,7 @@ function editBlog2() {
     $("#keyboard").show();
     $("#words2").show();
     $("#eb2").val("on");
-    act ="";
+    act ="words2";
   }
   else {
     $("#editBlog1").show();
@@ -58,7 +58,7 @@ function editBlog3() {
     $("#keyboard").show();
     $("#words3").show();
     $("#eb3").val("on");
-    act ="";
+    act ="words3";
   }
   else {
     $("#editBlog2").show();
@@ -94,8 +94,8 @@ function addChar(selection) {
 
 // New line break
 function enter() {
-  var currChars = $("#words1").val();
-  $("#words1").val(currChars.concat("\n"));
+  var currChars = $("#"+ act).val();
+  $("#"+ act).val(currChars.concat("\n"));
 }
 
 // Toggle caps lock
