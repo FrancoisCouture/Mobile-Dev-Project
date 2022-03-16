@@ -19,6 +19,7 @@ function editBlog1() {
     $("#keyboard").show();
     $("#words1").show();
     $("#eb1").val("on");
+    act ="";
   }
   else {
     $("#editBlog2").show();
@@ -38,6 +39,7 @@ function editBlog2() {
     $("#keyboard").show();
     $("#words2").show();
     $("#eb2").val("on");
+    act ="";
   }
   else {
     $("#editBlog1").show();
@@ -56,6 +58,7 @@ function editBlog3() {
     $("#keyboard").show();
     $("#words3").show();
     $("#eb3").val("on");
+    act ="";
   }
   else {
     $("#editBlog2").show();
