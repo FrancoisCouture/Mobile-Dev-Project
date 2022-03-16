@@ -143,6 +143,19 @@ tr {
 
 td a {
   width: 100%;
+  transition: transform 0.5s;
+}
+
+td a:hover {
+  transform: scale(1.2);
+}
+
+#space {
+  transition: transform;
+}
+
+#space:hover {
+  transform: scale(1.05, 1.025);
 }
 
 a p {

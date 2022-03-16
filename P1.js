@@ -10,7 +10,26 @@ function setup() {
 
   $("#eb3").val("off");
 
+  for(var i = 0; i < x.length; i++){
+    x[i].innerText = x[i].innerText.toLowerCase();
+  }
+
 }
+
+window.onmousemove = function(event){
+  var b = event.clientY; 
+  console.log(b);
+	if (b > (850)) 
+	{ 
+	window.scrollBy(0,50); 
+	} 
+  if (b < (50)) 
+	{
+	window.scrollBy(0,-50); 
+	} 
+}; 
+
+
 
 function editBlog1() {
   if ($("#eb1").val() == "off"){
@@ -44,8 +63,8 @@ function editBlog2() {
   else {
     $("#editBlog1").show();
     $("#editBlog3").show();
-    $("#keyboard").hide();$
-    ("#words2").hide();
+    $("#keyboard").hide();
+    $("#words2").hide();
     $("#eb2").val("off");
 	  $("#words").val("");
   }
@@ -87,6 +106,10 @@ function addChar(selection) {
     } else {
       // Place one lower case char
       $("#"+ act).val(currChars.concat(selection));
+      if(selection == "."){
+        console.log("end of sentence!");
+        $("#"+ act).val(currChars.concat(". "));
+      }
     }
     
   }
@@ -99,14 +122,23 @@ function enter() {
 }
 
 // Toggle caps lock
+let x = document.getElementsByClassName("ltr");
 function caps() {
+  console.log(x.length);
   if(cap == false){ 
     console.log("cap is true!");
     cap = true;
+    for(var i = 0; i < x.length; i++){
+    x[i].innerText = x[i].innerText.toUpperCase();
+    }
   } else {
     cap = false;
+    for(var i = 0; i < x.length; i++){
+      x[i].innerText = x[i].innerText.toLowerCase();
+    }
   }
 }
+
 
 function saveTitle(){
 	
