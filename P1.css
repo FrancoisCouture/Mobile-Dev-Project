@@ -127,6 +127,7 @@ table {
   width: 80%;
   border-collapse: collapse;
   margin: 0 0 1em 0;
+  background-color: black;
 }
 
 textarea {
@@ -144,6 +145,8 @@ tr {
 td a {
   width: 100%;
   transition: transform 0.5s;
+  margin: 5px;
+  background-color: #af1e2d;
 }
 
 td a:hover {

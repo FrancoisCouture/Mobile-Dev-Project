@@ -103,12 +103,15 @@ function addChar(selection) {
     if (cap === true) {
       // Place one upper case char
       $("#"+ act).val(currChars.concat(selection.toUpperCase()));
+      caps();
     } else {
       // Place one lower case char
       $("#"+ act).val(currChars.concat(selection));
       if(selection == "."){
         console.log("end of sentence!");
         $("#"+ act).val(currChars.concat(". "));
+        cap = false;
+        caps();
       }
     }
     
