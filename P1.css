@@ -131,6 +131,7 @@ table {
 }
 
 .spec {
+  width: 95%;
 }
 
 textarea {
@@ -158,7 +159,7 @@ td a:hover {
 
 #space {
   transition: transform;
-  width: 97%;
+  width: 99.2%;
 }
 
 #space:hover {
