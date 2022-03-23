@@ -4,8 +4,12 @@ github. Feel free to use the description for whatever. (Francois)
 1. Create the word bank
 
 2. Implement keyboard functionality for everything including the grey keys.
+	- each key is 50px
+	- 25px spacing between keys
+	- key font size is double default
+	- keyboard width can't go beyond 725px
+	- implement full keyboard functionality
+	- key should double in size when hovered on
 
-3. Implement functionality for the Edit column for server side
-
-4. Implement the save cancel functionality in local storage only.
+3. Implement the save cancel functionality in local storage only.
 
