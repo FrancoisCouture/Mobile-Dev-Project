@@ -131,8 +131,8 @@ table {
 }
 
 textarea {
-  width: 1440px;
-  height: 100px;
+  width: 80%;
+  height: 250px; /* so that the text box displays 8 lines by default*/
   font-size: 14pt;
   margin: 0.25em 0 0.25em 0;
 }
