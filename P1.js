@@ -113,6 +113,7 @@ function enter() {
 
 // Toggle caps lock
 let x = document.getElementsByClassName("ltr");
+
 function caps() {
   console.log(x.length);
   if(cap == false){ 
