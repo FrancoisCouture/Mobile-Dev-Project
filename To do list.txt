@@ -2,14 +2,22 @@ This is the guide I obtained from brightspace. If you did some work, put a numbe
 github. Feel free to use the description for whatever. (Francois)
 
 1. Create the word bank
+	- a spaced inserted after a selected word
+	- all words should be visible at the same time
 
 2. Implement keyboard functionality for everything including the grey keys.
 	- each key is 50px
 	- 25px spacing between keys
 	- key font size is double default
 	- keyboard width can't go beyond 725px
-	- implement full keyboard functionality
+	- implement full keyboard functionality (symbols etc)
 	- key should double in size when hovered on
+	- shift key and caps-lock both present
+	- once key is pressed, shift should be de-activated
 
-3. Implement the save cancel functionality in local storage only.
+3. Implement the save/cancel/undo functionality.
+	- this is in the text box area aswell
 
+4. Once the others are done, each blog should save to the server.
+	- the publish button should not work if the
+	  server isn't working
