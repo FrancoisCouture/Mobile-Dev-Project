@@ -104,6 +104,19 @@
           <textarea type = "text" id = "words2" onclick="active()"></textarea>
           <textarea type = "text" id = "words3" onclick="active()"></textarea>
 		    </tr>
+	            <!-- added by Mark -->
+      <tr>
+        <td colspan="4"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="saveWord()"
+            style="width: 588px; height: 100px;">Save
+            Word</button></td>
+        <td colspan="4"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="savePhrase()"
+            style="width: 588px; height: 100px;">Save
+            Phrase</button>
+        </td>
+        <td colspan="4"><button type="button" class="btn btn-warning btn-lg btn-block" onclick="undo()"
+            style="width: 600px; height: 100px;">Undo</button>
+        </td>
+      </tr>
 		<!-- done by Jun -->
         <tr >
           <td><a data-role="button" class="btn btn-danger" onclick="addChar('1')"><p>1</p></a></td>
