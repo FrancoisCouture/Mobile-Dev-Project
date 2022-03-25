@@ -20,37 +20,32 @@ function setup() {
 
 function editBlog1() {
   if ($("#eb1").val() == "off"){
-    $("#editBlog2").hide();
-    $("#editBlog3").hide();
-    $("#keyboard").show();
+	$("#wrapper").hide();
+	$("#keyboard").show();
     $("#words1").show();
     $("#eb1").val("on");
     act ="words1";
   }
   else {
-    $("#editBlog2").show();
-    $("#editBlog3").show();
-    $("#keyboard").hide();
+    $("#wrapper").show();
+	$("#keyboard").hide();
     $("#words1").hide();
     $("#eb1").val("off");
 	  $("#words").val("");
   }
-
 }
 
 function editBlog2() {
   if ($("#eb2").val() == "off"){
-    $("#editBlog1").hide();
-    $("#editBlog3").hide();
-    $("#keyboard").show();
+	$("#wrapper").hide();
+	$("#keyboard").show();
     $("#words2").show();
     $("#eb2").val("on");
     act ="words2";
   }
   else {
-    $("#editBlog1").show();
-    $("#editBlog3").show();
-    $("#keyboard").hide();
+    $("#wrapper").show();
+	$("#keyboard").hide();
     $("#words2").hide();
     $("#eb2").val("off");
 	  $("#words").val("");
@@ -59,17 +54,15 @@ function editBlog2() {
 
 function editBlog3() {
   if ($("#eb3").val() == "off"){
-    $("#editBlog2").hide();
-    $("#editBlog1").hide();
-    $("#keyboard").show();
+	$("#wrapper").hide();
+	$("#keyboard").show();
     $("#words3").show();
     $("#eb3").val("on");
     act ="words3";
   }
   else {
-    $("#editBlog2").show();
-    $("#editBlog1").show();
-    $("#keyboard").hide();
+    $("#wrapper").show();
+	$("#keyboard").hide();
     $("#words3").hide();
     $("#eb3").val("off");
 	  $("#words").val("");
@@ -132,7 +125,30 @@ function caps() {
 
 
 function saveTitle(){
-	
+  if ($("#eb1").val() == "on"){
+    $("#wrapper").show();
+	$("#keyboard").hide();
+    $("#words1").hide();
+    $("#eb1").val("off");
+	$("#words").val("");
+	$("#eb1_1").prop( "checked", false );
+  }
+  if ($("#eb2").val() == "on"){
+    $("#wrapper").show();
+	$("#keyboard").hide();
+    $("#words2").hide();
+    $("#eb2").val("off");
+	$("#words").val("");
+	$("#eb2_1").prop( "checked", false );
+  }
+  if ($("#eb3").val() == "on"){
+    $("#wrapper").show();
+	$("#keyboard").hide();
+    $("#words3").hide();
+    $("#eb3").val("off");
+	$("#words").val("");
+	$("#eb3_1").prop( "checked", false );
+  }
 }
 
 // The last text box clicked becomes the "active" textbox. 

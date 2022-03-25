@@ -27,8 +27,8 @@
     <script src="./P1.js"></script>
   </head>
   <body class="m-5" onload="setup()">
-    <div class="wrapper">
-      <div class="c1r1">Blog Name</div>
+    <div class="wrapper" id ="wrapper">
+      <div class="c1r1" id = "hBlogName">Blog Name</div>
       <div class="c1r2">
         <input
           type="text"
@@ -53,42 +53,42 @@
           onclick="active()"
         />
       </div>
-      <div class="c2r1">Edit</div>
+      <div class="c2r1" id = "hEdit">Edit</div>
       <!--https://www.bootstraptoggle.com/#usage-->
       <!-- where i got the toggle switches from , 
         theyre just used as a place holder for now. -->
       <div class="c2r2" >
         <label class="switch" id="editBlog1">
-          <input id="eb11" role="switch" type="checkbox" autocomplete="off" onclick="editBlog1()" />
+          <input id="eb1_1" role="switch" type="checkbox" autocomplete="off" onclick="editBlog1()" />
           <span id="eb1" class="slider round"></span>
         </label>
       </div>
       <div class="c2r3" >
         <label class="switch" id="editBlog2">
-          <input role="switch" type="checkbox" autocomplete="off" onclick="editBlog2()" />
+          <input id="eb2_1" role="switch" type="checkbox" autocomplete="off" onclick="editBlog2()" />
           <span id="eb2" class="slider round"></span>
         </label>
       </div>
       <div class="c2r4" >
         <label class="switch" id="editBlog3">
-          <input role="switch" type="checkbox" autocomplete="off" onclick="editBlog3()" />
+          <input id="eb3_1" role="switch" type="checkbox" autocomplete="off" onclick="editBlog3()" />
           <span id="eb3" class="slider round"></span>
         </label>
       </div>
-      <div class="c3r1">Publish</div>
-      <div class="c3r2">
+      <div class="c3r1" id = "hPublish">Publish</div>
+      <div class="c3r2" id = "publish1">
+        <label class="switch" >
+          <input type="checkbox" disabled />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="c3r3" id = "publish2">
         <label class="switch">
           <input type="checkbox" disabled />
           <span class="slider round"></span>
         </label>
       </div>
-      <div class="c3r3">
-        <label class="switch">
-          <input type="checkbox" disabled />
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <div class="c3r4">
+      <div class="c3r4" id = "publish3">
         <label class="switch">
           <input type="checkbox" disabled />
           <span class="slider round"></span>
