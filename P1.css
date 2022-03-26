@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+  overflow: hidden;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -134,7 +138,8 @@ table {
   width: 95%;
 }
 
-.spec2{ /* this is just for the word bank buttons */
+.spec2 {
+  /* this is just for the word bank buttons */
   width: 94%;
   margin: 5px;
   height: 100px;
