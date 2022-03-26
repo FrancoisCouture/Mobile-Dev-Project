@@ -145,6 +145,10 @@ table {
   height: 100px;
 }
 
+.spec2:hover {
+  transform: scale(1.2);
+}
+
 textarea {
   width: 80%;
   height: 250px; /* so that the text box displays 8 lines by default*/
