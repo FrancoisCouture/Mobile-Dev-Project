@@ -134,6 +134,12 @@ table {
   width: 95%;
 }
 
+.spec2{ /* this is just for the word bank buttons */
+  width: 94%;
+  margin: 5px;
+  height: 100px;
+}
+
 textarea {
   width: 80%;
   height: 250px; /* so that the text box displays 8 lines by default*/
