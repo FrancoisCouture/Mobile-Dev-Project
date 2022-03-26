@@ -138,7 +138,8 @@ table {
   width: 95%;
 }
 
-.spec2 {
+.spec2,
+.spec3 {
   /* this is just for the word bank buttons */
   width: 94%;
   margin: 5px;
@@ -146,7 +147,7 @@ table {
 }
 
 .spec2:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 textarea {
