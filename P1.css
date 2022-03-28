@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+  overflow: hidden;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -130,6 +134,22 @@ table {
   background-color: black;
 }
 
+.spec {
+  width: 95%;
+}
+
+.spec2,
+.spec3 {
+  /* this is just for the word bank buttons */
+  width: 94%;
+  margin: 5px;
+  height: 100px;
+}
+
+.spec2:hover {
+  transform: scale(1.1);
+}
+
 textarea {
   width: 80%;
   height: 250px; /* so that the text box displays 8 lines by default*/
@@ -143,18 +163,19 @@ tr {
 }
 
 td a {
-  width: 100%;
+  width: 80%;
   transition: transform 0.5s;
   margin: 5px;
   background-color: #af1e2d;
 }
 
 td a:hover {
-  transform: scale(1.35);
+  transform: scale(1.75);
 }
 
 #space {
   transition: transform;
+  width: 99.2%;
 }
 
 #space:hover {
@@ -162,7 +183,7 @@ td a:hover {
 }
 
 a p {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .txt {

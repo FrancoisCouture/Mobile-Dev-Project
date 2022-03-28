@@ -10,7 +10,7 @@ function setup() {
 
   $("#eb3").val("off");
 
-  for(var i = 0; i < x.length; i++){
+  for (var i = 0; i < x.length; i++) {
     x[i].innerText = x[i].innerText.toLowerCase();
   }
 
@@ -32,64 +32,57 @@ window.onmousemove = function(event){
 
 
 function editBlog1() {
-  if ($("#eb1").val() == "off"){
-    $("#editBlog2").hide();
-    $("#editBlog3").hide();
+  if ($("#eb1").val() == "off") {
+    $("#wrapper").hide();
     $("#keyboard").show();
     $("#words1").show();
     $("#eb1").val("on");
-    act ="words1";
+    act = "words1";
   }
   else {
-    $("#editBlog2").show();
-    $("#editBlog3").show();
+    $("#wrapper").show();
     $("#keyboard").hide();
     $("#words1").hide();
     $("#eb1").val("off");
-	  $("#words").val("");
+    $("#words").val("");
   }
-
 }
 
 function editBlog2() {
-  if ($("#eb2").val() == "off"){
-    $("#editBlog1").hide();
-    $("#editBlog3").hide();
+  if ($("#eb2").val() == "off") {
+    $("#wrapper").hide();
     $("#keyboard").show();
     $("#words2").show();
     $("#eb2").val("on");
-    act ="words2";
+    act = "words2";
   }
   else {
-    $("#editBlog1").show();
-    $("#editBlog3").show();
+    $("#wrapper").show();
     $("#keyboard").hide();
     $("#words2").hide();
     $("#eb2").val("off");
-	  $("#words").val("");
+    $("#words").val("");
   }
 }
 
 function editBlog3() {
-  if ($("#eb3").val() == "off"){
-    $("#editBlog2").hide();
-    $("#editBlog1").hide();
+  if ($("#eb3").val() == "off") {
+    $("#wrapper").hide();
     $("#keyboard").show();
     $("#words3").show();
     $("#eb3").val("on");
-    act ="words3";
+    act = "words3";
   }
   else {
-    $("#editBlog2").show();
-    $("#editBlog1").show();
+    $("#wrapper").show();
     $("#keyboard").hide();
     $("#words3").hide();
     $("#eb3").val("off");
-	  $("#words").val("");
+    $("#words").val("");
   }
 }
 
-// end of toggle functionality-------------------------------------------
+// end of toggle functionality-----------------------------------------------------------------------------------
 
 let cap = false;
 function addChar(selection) {
@@ -109,7 +102,7 @@ function addChar(selection) {
 
   if (selection === "bksp") {
     // Remove one char
-    $("#"+ act).val(currChars.substring(0, currChars.length - 1));
+    $("#" + act).val(currChars.substring(0, currChars.length - 1));
   } else {
     if (cap === true) {
        if (selection in special) {
@@ -123,8 +116,8 @@ function addChar(selection) {
     }
     } else {
       // Place one lower case char
-      $("#"+ act).val(currChars.concat(selection));
-      if(selection == "."){
+      $("#" + act).val(currChars.concat(selection));
+      if (selection == ".") {
         console.log("end of sentence!");
         $("#"+ act).val(currChars.concat(". "));
 
@@ -133,26 +126,22 @@ function addChar(selection) {
         caps();
       }
     }
-    
+
   }
 }
 
 // New line break
 function enter() {
-  var currChars = $("#"+ act).val();
-  $("#"+ act).val(currChars.concat("\n"));
+  var currChars = $("#" + act).val();
+  $("#" + act).val(currChars.concat("\n"));
 }
 
 // Toggle caps lock
 let x = document.getElementsByClassName("ltr");
 
-
-
-
-
 function caps() {
   console.log(x.length);
-  if(cap == false){ 
+  if (cap == false) {
     console.log("cap is true!");
     cap = true;
     for(var i = 0; i < x.length; i++){
@@ -163,7 +152,7 @@ function caps() {
    
   } else {
     cap = false;
-    for(var i = 0; i < x.length; i++){
+    for (var i = 0; i < x.length; i++) {
       x[i].innerText = x[i].innerText.toLowerCase();
 
     }
@@ -182,9 +171,23 @@ function saveTitle(){
 // The last text box clicked becomes the "active" textbox. 
 // This means when the keyboard is typed, values will appear in the active textbox.
 let act;
-function active(){
+function active() {
   act = document.activeElement.id;
-  console.log("active element is now: "+ act);
+  console.log("active element is now: " + act);
+}
+
+// JS for word bank -----------------------------------------------------------------------------------------------------
+var arr = [];
+
+function saveWord() {
+  console.log("attempt to save word");
+  var userInput = document.getElementById("words1").value;
+  var n = userInput.split(" ");
+  console.log(n[n.length - 1]);
+  arr.push(n[n.length - 1]);
+  console.log(arr);
+  document.getElementById("wordBankItems").textContent = arr.join(", ");
+  return n[n.length - 1];
 }
 
 function characterChange(){
