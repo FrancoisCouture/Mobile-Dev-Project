@@ -151,8 +151,31 @@ function caps() {
 
 
 
-function saveTitle(){
-	
+function saveTitle() {
+  if ($("#eb1").val() == "on") {
+    $("#wrapper").show();
+    $("#keyboard").hide();
+    $("#words1").hide();
+    $("#eb1").val("off");
+    $("#words").val("");
+    $("#eb1_1").prop("checked", false);
+  }
+  if ($("#eb2").val() == "on") {
+    $("#wrapper").show();
+    $("#keyboard").hide();
+    $("#words2").hide();
+    $("#eb2").val("off");
+    $("#words").val("");
+    $("#eb2_1").prop("checked", false);
+  }
+  if ($("#eb3").val() == "on") {
+    $("#wrapper").show();
+    $("#keyboard").hide();
+    $("#words3").hide();
+    $("#eb3").val("off");
+    $("#words").val("");
+    $("#eb3_1").prop("checked", false);
+  }
 }
 
 // The last text box clicked becomes the "active" textbox. 
