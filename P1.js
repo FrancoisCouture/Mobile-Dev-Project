@@ -16,19 +16,6 @@ function setup() {
 
 }
 
-window.onmousemove = function(event){
-  var b = event.clientY; 
-  console.log(b);
-	if (b > (850)) 
-	{ 
-	window.scrollBy(0,50); 
-	} 
-  if (b < (50)) 
-	{
-	window.scrollBy(0,-50); 
-	} 
-}; 
-
 
 
 function editBlog1() {
