@@ -160,12 +160,16 @@ function active() {
 }
 
 // JS for word bank -----------------------------------------------------------------------------------------------------
+var arr = [];
 
 function saveWord() {
   console.log("attempt to save word");
   var userInput = document.getElementById("words1").value;
   var n = userInput.split(" ");
   console.log(n[n.length - 1]);
+  arr.push(n[n.length - 1]);
+  console.log(arr);
+  document.getElementById("wordBankItems").textContent = arr.join(", ");
   return n[n.length - 1];
 }
 
@@ -174,6 +178,9 @@ function savePhrase() {
   var userInput = document.getElementById("words1").value;
   var n = userInput.split(". ");
   console.log(n[n.length - 1]);
+  arr.push(n[n.length - 1]);
+  console.log(arr);
+  document.getElementById("wordBankItems").textContent = arr.join(", ");
   return n[n.length - 1];
 }
 
@@ -188,4 +195,6 @@ function undo() {
 
 function deleteItem() {
   console.log("attempt to delete item from word bank");
+  document.getElementById("wordBankItems").textContent = arr.splice[arr.length - 1, 1];
+  console.log(arr);
 }
