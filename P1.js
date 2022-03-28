@@ -16,6 +16,19 @@ function setup() {
 
 }
 
+window.onmousemove = function(event){
+  var b = event.clientY; 
+  console.log(b);
+	if (b > (850)) 
+	{ 
+	window.scrollBy(0,50); 
+	} 
+  if (b < (50)) 
+	{
+	window.scrollBy(0,-50); 
+	} 
+}; 
+
 
 
 function editBlog1() {
@@ -82,21 +95,40 @@ let cap = false;
 function addChar(selection) {
   // Get the value from the id field
   var currChars = $("#"+ act).val();
+  const special = {'1':'@',
+                  '2':'!',
+                  '3':'$',
+                  '4':'%',
+                  '5':'&',
+                  '6':'(' ,
+                  '7':')',
+                  '8':';',
+                  '9':':',
+                  '0':'"'};
+    console.log(selection in special);
 
   if (selection === "bksp") {
     // Remove one char
     $("#"+ act).val(currChars.substring(0, currChars.length - 1));
   } else {
     if (cap === true) {
-      // Place one upper case char
+       if (selection in special) {
+        $("#"+ act).val(currChars.concat(special[selection]));
+        caps();
+       } else {
+         // Place one upper case char
       $("#"+ act).val(currChars.concat(selection.toUpperCase()));
+      
       caps();
+    }
     } else {
       // Place one lower case char
       $("#"+ act).val(currChars.concat(selection));
       if(selection == "."){
         console.log("end of sentence!");
         $("#"+ act).val(currChars.concat(". "));
+
+        
         cap = false;
         caps();
       }
@@ -113,6 +145,11 @@ function enter() {
 
 // Toggle caps lock
 let x = document.getElementsByClassName("ltr");
+
+
+
+
+
 function caps() {
   console.log(x.length);
   if(cap == false){ 
@@ -120,14 +157,22 @@ function caps() {
     cap = true;
     for(var i = 0; i < x.length; i++){
     x[i].innerText = x[i].innerText.toUpperCase();
+    
     }
+    characterChange();
+   
   } else {
     cap = false;
     for(var i = 0; i < x.length; i++){
       x[i].innerText = x[i].innerText.toLowerCase();
+
     }
+    numeralChange();
+    
   }
+
 }
+
 
 
 function saveTitle(){
@@ -140,4 +185,30 @@ let act;
 function active(){
   act = document.activeElement.id;
   console.log("active element is now: "+ act);
+}
+
+function characterChange(){
+    document.getElementById("num1").innerText = "@";
+    document.getElementById("num2").innerHTML = "!";
+    document.getElementById("num3").innerHTML = "$";
+    document.getElementById("num4").innerHTML = "%";
+    document.getElementById("num5").innerHTML = "&";
+    document.getElementById("num6").innerHTML = "(";
+    document.getElementById("num7").innerHTML = ")";
+    document.getElementById("num8").innerHTML = ":";
+    document.getElementById("num9").innerHTML = ";";
+    document.getElementById("num0").innerHTML = "'";
+}
+
+function numeralChange(){
+    document.getElementById("num1").innerText = "1";
+    document.getElementById("num2").innerHTML = "2";
+    document.getElementById("num3").innerHTML = "3";
+    document.getElementById("num4").innerHTML = "4";
+    document.getElementById("num5").innerHTML = "5";
+    document.getElementById("num6").innerHTML = "6";
+    document.getElementById("num7").innerHTML = "7";
+    document.getElementById("num8").innerHTML = "8";
+    document.getElementById("num9").innerHTML = "9";
+    document.getElementById("num0").innerHTML = "0";
 }
