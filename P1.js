@@ -215,3 +215,17 @@ function numeralChange(){
     document.getElementById("num9").innerHTML = "9";
     document.getElementById("num0").innerHTML = "0";
 }
+
+function save() {
+  var content = $("#words").val();
+  if (typeof Storage !== "undefined"){
+     window.localStorage.setItem("content",content);
+  }else{
+    console.log("local storage is not available");
+  }
+}
+
+function cancel(){
+  document.getElementById("context").innerHTML = "";
+  
+}
