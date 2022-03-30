@@ -25,6 +25,7 @@ function editBlog1() {
     $("#words1").show();
     $("#eb1").val("on");
     act = "words1";
+    sAct = "words1";
   }
   else {
     $("#wrapper").show();
@@ -42,6 +43,7 @@ function editBlog2() {
     $("#words2").show();
     $("#eb2").val("on");
     act = "words2";
+    sAct = "words2";
   }
   else {
     $("#wrapper").show();
@@ -59,6 +61,7 @@ function editBlog3() {
     $("#words3").show();
     $("#eb3").val("on");
     act = "words3";
+    Sact = "words3";
   }
   else {
     $("#wrapper").show();
@@ -84,7 +87,7 @@ function addChar(selection) {
                   '7':')',
                   '8':';',
                   '9':':',
-                  '0':'"'};
+                  '0':"'"};
     console.log(selection in special);
 
   if (selection === "bksp") {
@@ -186,6 +189,12 @@ function active() {
   console.log("active element is now: " + act);
 }
 
+let sAct;
+function specActive() {
+  sAct = document.activeElement.id;
+  console.log("active element is now: " + sAct);
+}
+
 // JS for word bank -----------------------------------------------------------------------------------------------------
 var arr = [];
 
@@ -238,4 +247,17 @@ function save() {
 function cancel(){
   document.getElementById("context").innerHTML = "";
   
+}
+
+function addWordb1(){
+  var currChars = $("#"+ sAct).val();
+  $("#"+ sAct).val(currChars.concat($("#wordsb1").val()));
+}
+function addWordb2(){
+  var currChars = $("#"+ sAct).val();
+  $("#"+ sAct).val(currChars.concat($("#wordsb2").val()));
+}
+function addWordb3(){
+  var currChars = $("#"+ sAct).val();
+  $("#"+ sAct).val(currChars.concat($("#wordsb3").val()));
 }
