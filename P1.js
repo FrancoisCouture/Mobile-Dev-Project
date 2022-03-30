@@ -216,6 +216,24 @@ function saveWord() {
   
 }
 
+function savePhrase() {
+  var currChars = $("#"+ sAct).val();
+  var words = currChars.split(".");
+  if ($("#wordsb1").val() == ""){
+    $("#wordsb1").val(words.pop());
+  }
+  else if ($("#wordsb2").val() == ""){
+    $("#wordsb2").val(words.pop());
+  }
+  else if ($("#wordsb3").val() == ""){
+    $("#wordsb3").val(words.pop());
+  }
+  else{
+    $("#wordsb1").val(words.pop());
+  }
+  
+}
+
 function undo(){
   var currChars = $("#"+ act).val();
   var words = currChars.split(" ");
