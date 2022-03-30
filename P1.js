@@ -165,23 +165,25 @@ var arr = [];
 function saveWord() {
   console.log("attempt to save word");
   var userInput = document.getElementById("words1").value;
+  /*var userInput = document.getElementById("words2").value;
+  var userInput = document.getElementById("words3").value;*/
   var n = userInput.split(" ");
-  console.log(n[n.length - 1]);
-  arr.push(n[n.length - 1]);
+  var lastWord = n[n.length - 1];
+  console.log(lastWord);
+  arr.push(lastWord);
   console.log(arr);
-  document.getElementById("wordBankItems").textContent = arr.join(", ");
-  return n[n.length - 1];
+  arrayButton(lastWord);
 }
 
 function savePhrase() {
   console.log("attempt to save phrase");
   var userInput = document.getElementById("words1").value;
   var n = userInput.split(". ");
-  console.log(n[n.length - 1]);
-  arr.push(n[n.length - 1]);
+  var lastPhrase = n[n.length - 1];
+  console.log(lastPhrase);
+  arr.push(lastPhrase);
   console.log(arr);
-  document.getElementById("wordBankItems").textContent = arr.join(", ");
-  return n[n.length - 1];
+  arrayButton(lastPhrase);
 }
 
 function undo() {
@@ -195,6 +197,20 @@ function undo() {
 
 function deleteItem() {
   console.log("attempt to delete item from word bank");
-  document.getElementById("wordBankItems").textContent = arr.splice[arr.length - 1, 1];
   console.log(arr);
+  var wordBank = document.getElementById("wordBank");
+  wordBank.removeChild(wordBank.lastChild)
 }
+
+function arrayButton(buttonName) {
+  var button = document.createElement("input");
+  button.type = "button";
+  button.value = buttonName;
+  button.addEventListener("click",function(){
+    document.getElementById("words1").value += (" " + buttonName);
+  })
+  var wordBank = document.getElementById("wordBank");
+  wordBank.appendChild(button);
+}
+
+
