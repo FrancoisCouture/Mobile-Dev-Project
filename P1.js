@@ -199,14 +199,30 @@ function specActive() {
 var arr = [];
 
 function saveWord() {
-  console.log("attempt to save word");
-  var userInput = document.getElementById("words1").value;
-  var n = userInput.split(" ");
-  console.log(n[n.length - 1]);
-  arr.push(n[n.length - 1]);
-  console.log(arr);
-  document.getElementById("wordBankItems").textContent = arr.join(", ");
-  return n[n.length - 1];
+  var currChars = $("#"+ sAct).val();
+  var words = currChars.split(" ");
+  if ($("#wordsb1").val() == ""){
+    $("#wordsb1").val(words.pop());
+  }
+  else if ($("#wordsb2").val() == ""){
+    $("#wordsb2").val(words.pop());
+  }
+  else if ($("#wordsb3").val() == ""){
+    $("#wordsb3").val(words.pop());
+  }
+  else{
+    $("#wordsb1").val(words.pop());
+  }
+  
+}
+
+function undo(){
+  var currChars = $("#"+ act).val();
+  var words = currChars.split(" ");
+  $("#" + act).val(currChars.substring(0, currChars.length - (words.pop().length+1)));
+
+
+
 }
 
 function characterChange(){
@@ -251,13 +267,13 @@ function cancel(){
 
 function addWordb1(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat($("#wordsb1").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
 }
 function addWordb2(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat($("#wordsb2").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
 }
 function addWordb3(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat($("#wordsb3").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
 }
