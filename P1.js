@@ -1,8 +1,8 @@
 function setup() {
   $("#keyboard").hide();
-  $("#words1").hide();
-  $("#words2").hide();
-  $("#words3").hide();
+  $("#blog1").hide();
+  $("#blog2").hide();
+  $("#blog3").hide();
 
   $("#eb1").val("off");
 
@@ -22,15 +22,15 @@ function editBlog1() {
   if ($("#eb1").val() == "off") {
     $("#wrapper").hide();
     $("#keyboard").show();
-    $("#words1").show();
+    $("#blog1").show();
     $("#eb1").val("on");
-    act = "words1";
-    sAct = "words1";
+    act = "blog1";
+    sAct = "blog1";
   }
   else {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words1").hide();
+    $("#blog1").hide();
     $("#eb1").val("off");
     $("#words").val("");
   }
@@ -40,15 +40,15 @@ function editBlog2() {
   if ($("#eb2").val() == "off") {
     $("#wrapper").hide();
     $("#keyboard").show();
-    $("#words2").show();
+    $("#blog2").show();
     $("#eb2").val("on");
-    act = "words2";
-    sAct = "words2";
+    act = "blog2";
+    sAct = "blog2";
   }
   else {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words2").hide();
+    $("#blog2").hide();
     $("#eb2").val("off");
     $("#words").val("");
   }
@@ -58,15 +58,15 @@ function editBlog3() {
   if ($("#eb3").val() == "off") {
     $("#wrapper").hide();
     $("#keyboard").show();
-    $("#words3").show();
+    $("#blog3").show();
     $("#eb3").val("on");
-    act = "words3";
-    Sact = "words3";
+    act = "blog3";
+    Sact = "blog3";
   }
   else {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words3").hide();
+    $("#blog3").hide();
     $("#eb3").val("off");
     $("#words").val("");
   }
@@ -158,7 +158,7 @@ function saveTitle() {
   if ($("#eb1").val() == "on") {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words1").hide();
+    $("#blog1").hide();
     $("#eb1").val("off");
     $("#words").val("");
     $("#eb1_1").prop("checked", false);
@@ -166,7 +166,7 @@ function saveTitle() {
   if ($("#eb2").val() == "on") {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words2").hide();
+    $("#blog2").hide();
     $("#eb2").val("off");
     $("#words").val("");
     $("#eb2_1").prop("checked", false);
@@ -174,7 +174,7 @@ function saveTitle() {
   if ($("#eb3").val() == "on") {
     $("#wrapper").show();
     $("#keyboard").hide();
-    $("#words3").hide();
+    $("#blog3").hide();
     $("#eb3").val("off");
     $("#words").val("");
     $("#eb3_1").prop("checked", false);
@@ -201,17 +201,17 @@ var arr = [];
 function saveWord() {
   var currChars = $("#"+ sAct).val();
   var words = currChars.split(" ");
-  if ($("#wordsb1").val() == ""){
-    $("#wordsb1").val(words.pop());
+  if ($("#wordbank1").val() == ""){
+    $("#wordbank1").val(words.pop());
   }
-  else if ($("#wordsb2").val() == ""){
-    $("#wordsb2").val(words.pop());
+  else if ($("#wordbank2").val() == ""){
+    $("#wordbank2").val(words.pop());
   }
-  else if ($("#wordsb3").val() == ""){
-    $("#wordsb3").val(words.pop());
+  else if ($("#wordbank3").val() == ""){
+    $("#wordbank3").val(words.pop());
   }
   else{
-    $("#wordsb1").val(words.pop());
+    $("#wordbank1").val(words.pop());
   }
   
 }
@@ -219,17 +219,17 @@ function saveWord() {
 function savePhrase() {
   var currChars = $("#"+ sAct).val();
   var words = currChars.split(".");
-  if ($("#wordsb1").val() == ""){
-    $("#wordsb1").val(words.pop());
+  if ($("#wordbank1").val() == ""){
+    $("#wordbank1").val(words.pop());
   }
-  else if ($("#wordsb2").val() == ""){
-    $("#wordsb2").val(words.pop());
+  else if ($("#wordbank2").val() == ""){
+    $("#wordbank2").val(words.pop());
   }
-  else if ($("#wordsb3").val() == ""){
-    $("#wordsb3").val(words.pop());
+  else if ($("#wordbank3").val() == ""){
+    $("#wordbank3").val(words.pop());
   }
   else{
-    $("#wordsb1").val(words.pop());
+    $("#wordbank1").val(words.pop());
   }
   
 }
@@ -285,13 +285,22 @@ function cancel(){
 
 function addWordb1(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordbank1").val()));
 }
 function addWordb2(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordbank2").val()));
 }
 function addWordb3(){
   var currChars = $("#"+ sAct).val();
-  $("#"+ sAct).val(currChars.concat(" "+ $("#wordsb1").val()));
+  $("#"+ sAct).val(currChars.concat(" "+ $("#wordbank3").val()));
+}
+
+function del(){
+  var currChars = $("#"+ act).val();
+  if (confirm("Do you want to delete " + act + "?")){
+    if (confirm("Are you sure?")){
+      $("#" + act).val("");
+    }
+  }
 }
